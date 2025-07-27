@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="relative w-full bg-gradient-to-t from-transparent via-transparent to-transparent h-full flex flex-col justify-end pb-32 z-20">
         <h1
           className="text-[2.8rem] bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-2 w-screen h-auto"
-          style={{ transformStyle: "preserve-3d", transform: "rotateX(30deg)" }}
+          style={{ transformStyle: "preserve-3d"}}
         >
           <h1 className="w-full text-transparent bg-clip-text h-auto">
             Create
