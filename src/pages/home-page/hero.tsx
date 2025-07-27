@@ -11,7 +11,7 @@ const Hero = () => {
         className="absolute z-10 w-full h-full object-cover bg-repeat"
       />
       <div
-        className="absolute hidden -inset-y-[100%] flex w-[100vw] flex-col md:-right-6 md:w-[1200px] blur"
+        className="absolute -inset-y-[100%] flex w-[100vw] flex-col md:-right-6 md:w-[1200px] blur"
         style={{
           maskImage:
             "linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255))",
@@ -37,12 +37,12 @@ const Hero = () => {
       <img
         src="/home-images/7653e72d8193ce82bc196fa636e5bb4d23a48f98_low.webp"
         alt=""
-        className="w-full h-full absolute object-cover"
+        className="w-full hidden h-full absolute object-cover"
         style={{ objectPosition: "center 30%" }}
       />
       <div className="relative w-full bg-gradient-to-t from-black via-black[0.9] to-transparent h-full flex flex-col justify-end pb-20 z-20">
         <h1
-          className="text-4xl bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-4 w-screen h-auto"
+          className="text-5xl bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-4 w-screen h-auto"
           style={{ transformStyle: "preserve-3d", transform: "rotateX(30deg)" }}
         >
           <h1 className="w-full text-transparent bg-clip-text h-auto">
