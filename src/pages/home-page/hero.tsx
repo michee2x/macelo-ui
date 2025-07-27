@@ -35,7 +35,7 @@ const Hero = () => {
         ></div>
       </div>
       <img
-        src="public/home-images/7653e72d8193ce82bc196fa636e5bb4d23a48f98_low.webp"
+        src="/home-images/7653e72d8193ce82bc196fa636e5bb4d23a48f98_low.webp"
         alt=""
         className="w-full h-full absolute opacity-[80%] object-cover"
         style={{ objectPosition: "center 30%" }}
