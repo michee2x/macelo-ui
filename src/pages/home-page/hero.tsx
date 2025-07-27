@@ -11,7 +11,7 @@ const Hero = () => {
         className="absolute z-10 w-full h-full object-cover bg-repeat"
       />
       <div
-        className="absolute -inset-y-[100%] flex w-[100vw] flex-col md:-right-6 md:w-[1200px] blur"
+        className="absolute -inset-y-[30%] flex w-[100vw] flex-col md:-right-6 md:w-[1200px] blur"
         style={{
           maskImage:
             "linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255))",
