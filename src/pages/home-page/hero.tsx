@@ -40,9 +40,9 @@ const Hero = () => {
         className="w-full hidden h-full absolute object-cover"
         style={{ objectPosition: "center 30%" }}
       />
-      <div className="relative w-full bg-gradient-to-t from-black via-black[0.9] to-transparent h-full flex flex-col justify-end pb-32 z-20">
+      <div className="relative w-full bg-gradient-to-t from-transparent via-transparent to-transparent h-full flex flex-col justify-end pb-32 z-20">
         <h1
-          className="text-5xl bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-2 w-screen h-auto"
+          className="text-[2.8rem] bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-2 w-screen h-auto"
           style={{ transformStyle: "preserve-3d", transform: "rotateX(30deg)" }}
         >
           <h1 className="w-full text-transparent bg-clip-text h-auto">
