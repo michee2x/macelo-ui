@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         batman: ['"Batman Forever"', 'sans-serif'],
+        batmanmini: ['"Batman Forever normal"', 'sans-serif']
       },
     },
   },

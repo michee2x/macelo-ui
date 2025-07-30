@@ -1,61 +1,20 @@
-
+import {motion} from "motion/react";
 const Hero = () => {
   return (
-    <div
-      style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
-      className="w-full overflow-hidden relative h-screen flex items-center justify-center"
-    >
-      <img
-        src="https://framerusercontent.com/images/1xOqMa4sAAwBCrdkiSJfIXups.png?scale-down-to=2048"
+    <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-center justify-center">
+      <motion.img
+        src="/home-images/herosectionglows.jpg"
         alt=""
-        className="absolute z-10 w-full h-full object-cover bg-repeat"
+        className="absolute lg:w-[1500px] -translate-x-1/2 left-1/2 -translate-y-1/2 lg:top-1/2 top-[40%] inset-0 object-cover"
       />
-      <div
-        className="absolute hidden -inset-y-[30%] flex w-[100vw] flex-col md:-right-6 md:w-[1200px] blur"
-        style={{
-          maskImage:
-            "linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255))",
-          opacity: 1,
-          transform: "none",
-        }}
-      >
-        <div
-          className="grow bg-green-700"
-          style={{
-            background:
-              "conic-gradient(from 180deg at 99.78% 35% in lab, rgb(255, 255, 255) 18deg, #03A9F4 36deg, rgba(17, 17, 17, 0) 90deg, rgba(17, 17, 17, 0) 342deg, rgb(255, 255, 255) 360deg)",
-          }}
-        ></div>
-        <div
-          className="grow"
-          style={{
-            background:
-              "conic-gradient(from 0deg at 99.78% 65% in lab, rgb(255, 255, 255) 0deg, rgba(17, 17, 17, 0) 18deg, rgba(17, 17, 17, 0) 270deg, #03A9F4 324deg, rgb(255, 255, 255) 342deg)",
-          }}
-        ></div>
-      </div>
-      <img
-        src="/home-images/7653e72d8193ce82bc196fa636e5bb4d23a48f98_low.webp"
-        alt=""
-        className="w-full hidden h-full absolute object-cover"
-        style={{ objectPosition: "center 30%" }}
-      />
-      <div className="relative w-full bg-gradient-to-t from-transparent via-transparent to-transparent h-full flex flex-col justify-end pb-32 z-20">
-        <h1
-          className="text-[2.8rem] bg-gradient-to-r from-blue-200/[0.09] to-blue-200 bg-clip-text lg:text-9xl p-2 w-screen h-auto"
-          style={{ transformStyle: "preserve-3d"}}
+      <h1 className="font-batmanmini text-[18px] bottom-[15%] lg:bottom-[5%] -translate-x-1/2 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
+        Do More Than <br />
+        <span
+          className="flex w-full h-fit justify-center bg-gradient-to-t to-[#019fa9] from-[#f6ec59] text-center bg-clip-text text-transparent  text-7xl lg:text-9xl"
         >
-          <h1 className="w-full text-transparent bg-clip-text h-auto">
-            Create
-          </h1>
-          <h1 className="w-full text-transparent bg-clip-text h-auto pl-5 lg:pl-20">
-            Advance
-          </h1>
-          <h1 className="w-full text-transparent bg-clip-text h-auto pl-10 lg:pl-40">
-            Reimagine
-          </h1>
-        </h1>
-      </div>
+          Magic
+        </span>
+      </h1>
     </div>
   );
 }

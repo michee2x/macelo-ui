@@ -2,7 +2,7 @@ import Hero from './hero'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='w-screen min-h-screen'>
         <Hero />
         {/* Other components can be added here */}
     </div>

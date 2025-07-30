@@ -26,7 +26,7 @@ const MovingBorder = ({
           className="pointer-events-none will-change-transform h-[800%] w-[50%] absolute"
           style={{
             transformStyle: "preserve-3d",
-            backgroundImage: "linear-gradient(90deg,#000,#05f 61%,#000)",
+            backgroundImage: "linear-gradient(90deg,#000,#019fa9 61%,#000)",
           }}
           animate={{
             rotateZ: clockwise ? 360 : -360,
@@ -41,4 +41,5 @@ const MovingBorder = ({
   );
 };
 
+//text-[#019fa9]
 export default MovingBorder

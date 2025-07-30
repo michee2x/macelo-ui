@@ -9,9 +9,9 @@
 }
 
 @font-face {
-    font-family: 'Batman Forever';
+    font-family: 'Batman Forever normal';
     src: url('/fonts/batman_forever/batmfa__.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
 }
 

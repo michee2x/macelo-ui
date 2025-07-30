@@ -76,7 +76,7 @@ const Nav = () => {
       } lg:py-0 z-[20000] flex-col lg:flex-row items-center flex justify-between border-b-[.3px] border-white/[0.2] lg:top-0 lg:w-screen min-h-8 lg:min-h-16 lg:bg-inherit/[0.5] backdrop-blur-[20px]`}
     >
       <div className="w-full lg:w-fit h-auto flex justify-between items-center">
-        <span className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-white/[0.5] tracking-tighter">
+        <span className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-[#019fa9] tracking-tighter">
           <span id="logo" className="flex">
             mecalo.
           </span>
