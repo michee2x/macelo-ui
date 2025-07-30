@@ -2,7 +2,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {motion} from "motion/react";
 import { useRef } from "react";
-import SciFiTextDemo from "../../Components/ScifiTextWriter";
 const Hero = () => {
     const texts = useRef<(HTMLSpanElement | null)[]>([])
 
@@ -38,7 +37,7 @@ const Hero = () => {
         alt=""
         className="absolute lg:w-[1200px] -translate-x-1/2 left-1/2 -translate-y-1/2 lg:top-[65%] top-[40%] inset-0 object-cover"
       />
-      <h1 className="font-batmanmini text-[18px] bottom-[15%] lg:bottom-[10%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
+      <h1 className="font-batmanmini text-[18px] bottom-[25%] lg:bottom-[10%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
         Do More Than <br />
         <span className="w-full flex h-[4.5rem] lg:h-[8rem] overflow-hidden flex-start">
           <span
@@ -60,10 +59,6 @@ const Hero = () => {
             })}
           </span>
         </span>
-      </h1>
-
-      <h1 className="absolute z-20 bottom-11 hidden">
-        <SciFiTextDemo />
       </h1>
     </div>
   );
