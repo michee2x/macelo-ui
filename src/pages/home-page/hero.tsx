@@ -31,13 +31,13 @@ const Hero = () => {
   })
   
   return (
-    <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-cente justify-center">
+    <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-cente justify-cente">
       <motion.img
         src="https://i.imgur.com/GEEU91r.png"
         alt=""
         className="absolute lg:w-[1200px] -translate-x-1/2 left-1/2 -translate-y-1/2 lg:top-[65%] top-[40%] inset-0 object-cover"
       />
-      <h1 className="font-batmanmini text-[18px] bottom-[25%] lg:bottom-[10%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
+      <h1 className="font-batmanmini text-[18px] bottom-[25%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
         Do More Than <br />
         <span className="w-full flex h-[4.5rem] lg:h-[8rem] overflow-hidden flex-start">
           <span
@@ -60,6 +60,15 @@ const Hero = () => {
           </span>
         </span>
       </h1>
+
+      <button className="w-[80%] h-auto flex justify-center absolute bottom-8 -translate-x-1/2 left-1/2">
+        <img
+          src="/home-images/WhatsApp_Image_2025-07-30_at_11.24.24_PM-removebg-preview.png"
+          alt=""
+          className="ml-6 h-[10rem]"
+        />
+        <h2 className="absolute top-1/2 -translate-y-1/2 text-[14px]">components</h2>
+      </button>
     </div>
   );
 }
