@@ -3,7 +3,7 @@ const Hero = () => {
   return (
     <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-center justify-center">
       <motion.img
-        src="/home-images/herosectionglows.jpg"
+        src="https://i.imgur.com/GEEU91r.png"
         alt=""
         className="absolute lg:w-[1500px] -translate-x-1/2 left-1/2 -translate-y-1/2 lg:top-1/2 top-[40%] inset-0 object-cover"
       />
