@@ -73,7 +73,7 @@ const Hero = () => {
   const bodyText = [
     "components that look like",
     "Build precisely to the",
-    "dump shit. aim the",
+    "Optimized templates for",
     "tools for advance"
   ]
 
@@ -122,7 +122,7 @@ const Hero = () => {
             id="texts-container"
             className="flex w-full justify-center flex-col text-6xl lg:text-9xl h-[max-content]"
           >
-            {["Magic", "Target", "Tech", "UIUX", "Magic"].map((e, idx) => {
+            {["Magic", "Target", "SEO", "UIUX", "Magic"].map((e, idx) => {
               return (
                 <span
                   className="w-full flex bg-gradient-to-t to-[#019fa9] from-[#f8dc2a] text-transparent bg-clip-text justify-center items-center"

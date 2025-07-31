@@ -10,14 +10,19 @@ import { Link } from "react-router-dom";
 
 const StarButton = ({lg}:{lg:boolean}) => {
   return (
-    <span className={`w-fit h-fit relative ${lg ? "lg:flex hidden" : "lg:hidden"} text-nowrap px-6 py-3 text-white rounded-lg`}>
+    <Link
+      to="https://github.com/michee2x/macelo-ui"
+      className={`w-fit h-fit relative ${
+        lg ? "lg:flex hidden" : "lg:hidden"
+      } text-nowrap px-6 py-3 text-white rounded-lg`}
+    >
       <MovingBorder>
         <span className="font-thin text-[10px] w-fit h-fit px-2 flex items-center gap-2">
           {" "}
           <FaGithub className="text-2xl" /> star on github
         </span>
       </MovingBorder>
-    </span>
+    </Link>
   );
 }
 
@@ -75,7 +80,11 @@ const Nav = () => {
       } lg:rounded-none lg:py-0 z-[20000] flex-col lg:flex-row items-center flex justify-between border-b-[.3px] border-white/[0.2] lg:top-0 lg:w-screen min-h-8 lg:min-h-16 lg:bg-inherit/[0.5] backdrop-blur-[20px]`}
     >
       <div className="w-full lg:w-fit h-auto flex justify-between items-center">
-        <Link to="/" className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-[#019fa9] tracking-tighter">
+        <Link
+          onClick={() => setShowNavBar(false)}
+          to="/"
+          className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-[#019fa9] tracking-tighter"
+        >
           <span id="logo" className="flex">
             mecalo.
           </span>
@@ -124,7 +133,11 @@ const Nav = () => {
       >
         {["Components", "Templates", "Docs"].map((e) => {
           return (
-            <Link onClick={() => setShowNavBar(false)} to={`/${e.toLocaleLowerCase()}`} className="w-fit h-fit font-light text-[16px] overflow-hidden">
+            <Link
+              onClick={() => setShowNavBar(false)}
+              to={`/${e.toLocaleLowerCase()}`}
+              className="w-fit h-fit font-light text-[16px] overflow-hidden"
+            >
               <span className=" text-[14px]">{e}</span>
             </Link>
           );
