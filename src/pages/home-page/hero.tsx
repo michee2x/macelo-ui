@@ -88,13 +88,13 @@ const Hero = () => {
             transformStyle: "preserve-3d",
             transform: `translate3d(0px, 0px, 0px)`,
           }}
-          className="bg-gradient-to-t from-black via-black/[0.2] to-transparent relative w-full h-full z-30"
+          className="bg-gradient-to-t from-black flex items-center justify-center via-black/[0.2] to-transparent relative w-full h-full z-30"
         ></div>
 
         {[
           "home-images/WhatsApp_Image_2025-07-31_at_12.07.20_AM-removebg-preview.png",
           "https://i.imgur.com/GEEU91r.png",
-          "home-images/WhatsApp_Image_2025-07-31_at_12.07.20_AM-removebg-preview.png",
+          "https://cdnb.artstation.com/p/assets/images/images/003/236/937/smaller_square/vadim-sadovski-2015-10-30-065811.jpg?1471459344",
           "/home-images/WhatsApp_Image_2025-07-31_at_2.27.21_AM-removebg-preview.png",
         ].map((src, idx) => (
           <motion.img
@@ -107,7 +107,7 @@ const Hero = () => {
             }}
             src={src}
             alt=""
-            className="absolute bg-black transition-transform duration-1000 ease-out delay-100"
+            className="absolute w-auto h-[90%] mx-auto inset-0 object-cover bg-black transition-transform duration-1000 ease-out delay-100"
           />
         ))}
       </div>
@@ -116,7 +116,7 @@ const Hero = () => {
         <HeroButton />
       </div>
       <h1 className="font-batmanmini z-50 text-[16px] bottom-[10%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
-        {bodyText[points[0]-1]} <br />
+        {bodyText[points[0] - 1]} <br />
         <span className="w-full flex h-[3.75rem] lg:h-[8rem] overflow-hidden flex-start">
           <span
             id="texts-container"
