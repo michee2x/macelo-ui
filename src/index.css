@@ -21,3 +21,58 @@
     font-weight: 600;
     font-style: normal;
 }
+
+
+
+
+
+  .with-scroll-bars-hidden {
+   overflow: hidden !important;
+   padding-right: 0px !important;
+  }
+  body[data-scroll-locked] {
+    overflow: hidden !important;
+    overscroll-behavior: contain;
+    position: relative !important;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-left:0;
+    margin-top:0;
+    margin-right: 0px !important;
+    
+  }
+  
+  .right-scroll-bar-position {
+    right: 0px !important;
+  }
+  
+  .width-before-scroll-bar {
+    margin-right: 0px !important;
+  }
+  
+  .right-scroll-bar-position .right-scroll-bar-position {
+    right: 0 !important;
+  }
+  
+  .width-before-scroll-bar .width-before-scroll-bar {
+    margin-right: 0 !important;
+  }
+  
+  body[data-scroll-locked] {
+    --removed-body-scroll-bar-size: 0px;
+  }
+
+
+
+
+
+  [data-radix-scroll-area-viewport] {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+      display: none
+  }

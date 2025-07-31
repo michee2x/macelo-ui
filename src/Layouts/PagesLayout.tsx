@@ -6,11 +6,7 @@ const PagesLayout = () => {
   return (
     <div className="relative max-w-[100vw] flex justify-center w-screen min-h-[120vh] text-white bg-white font-batman font-bold">
       <Nav />
-      <div
-        style={{
-          clipPath: "polygon(0 0, 100% 0, 100% 83.2%, 0% 100%)",
-        }}
-        className="w-full relative h-full bg-black"
+      <div className="w-full relative h-full bg-black"
       >
         <Outlet />
       </div>
