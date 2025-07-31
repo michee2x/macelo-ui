@@ -107,7 +107,7 @@ const Hero = () => {
             }}
             src={src}
             alt=""
-            className="absolute w-auto max-w-[95%] h-[80%] mx-auto object-cover bg-black transition-transform duration-1000 ease-out delay-100"
+            className="absolute w-auto max-w-[92%] h-[80%] mx-auto object-cover bg-black transition-transform duration-1000 ease-out delay-100"
           />
         ))}
       </div>
@@ -115,7 +115,7 @@ const Hero = () => {
       <div className="w-auto h-auto absolute top-[6rem]">
         <HeroButton />
       </div>
-      <h1 className="font-batmanmini z-50 text-[16px] bottom-[10%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
+      <h1 className="font-batmanmini z-50 text-[16px] bottom-[12%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
         {bodyText[points[0] - 1]} <br />
         <span className="w-full flex h-[3.75rem] lg:h-[8rem] overflow-hidden flex-start">
           <span
