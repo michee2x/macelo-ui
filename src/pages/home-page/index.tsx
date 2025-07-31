@@ -4,7 +4,9 @@ const HomePage = () => {
   return (
     <div className='w-screen min-h-screen'>
         <Hero />
-        {/* Other components can be added here */}
+        <main className='w-full min-h-screen'>
+
+        </main>
     </div>
   )
 }
