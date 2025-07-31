@@ -1,5 +1,6 @@
 import SearchInput from "../../Components/inputs/SearchInput";
 import {ComponentJson} from "../../Components/Componentsjson";
+import {Link} from "react-router-dom"
 
 /**
  * 
@@ -38,9 +39,9 @@ const ComponentsPage = () => {
                   </p>
                 </div>
 
-                <span className="text-xs flex mt-10">
+                <Link to={`/components/${category}`} className="text-xs text-[#019fa9] underline flex mt-10">
                   more in this catergory
-                </span>
+                </Link>
                 <span className="text-xs flex mt-2">type: {category}</span>
               </div>
             );

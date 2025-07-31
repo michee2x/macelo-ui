@@ -7,6 +7,7 @@ import TemplatesPage from "./pages/templates-page";
 import DocsPage from "./pages/docs-page";
 import ComponnentCategoryPage from "./pages/component-category-page";
 import ComponentsLayout from "./Layouts/ComponentsLayout";
+import ComponentsDetailPage from "./pages/component-details-page";
 
 const App = () => {
   return (
@@ -16,13 +17,14 @@ const App = () => {
           <Route path="/" element={<PagesLayout />}>
             <Route index element={<HomePage />} />
             <Route path="/components" element={<ComponentsLayout />}>
-              <Route
-                index
-                element={<ComponentsPage />}
-              />
+              <Route index element={<ComponentsPage />} />
               <Route
                 path="/components/:category"
                 element={<ComponnentCategoryPage />}
+              />
+              <Route
+                path="/components/:category/:component"
+                element={<ComponentsDetailPage />}
               />
             </Route>
             <Route path="/templates" element={<TemplatesPage />} />
