@@ -123,7 +123,7 @@ const Nav = () => {
           transformStyle: "preserve-3d",
         }}
       >
-        {["Components", "Templates", "Docs", "Discord"].map((e) => {
+        {["Components", "Templates", "Docs"].map((e) => {
           return (
             <li className="w-fit h-fit font-light text-[16px] overflow-hidden">
               <span className=" text-[14px]">{e}</span>
