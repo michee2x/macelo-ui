@@ -107,7 +107,7 @@ const Hero = () => {
             }}
             src={src}
             alt=""
-            className="absolute w-auto h-[90%] mx-auto inset-0 object-cover bg-black transition-transform duration-1000 ease-out delay-100"
+            className="absolute w-auto max-w-[95%] h-[80%] mx-auto object-cover bg-black transition-transform duration-1000 ease-out delay-100"
           />
         ))}
       </div>
