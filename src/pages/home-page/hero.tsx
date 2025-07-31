@@ -1,43 +1,105 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {motion} from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+
+const translateZPoints = [0, -100, -200, -300];
+
+const HeroButton = () => {
+  return (
+    <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+      <span className="absolute inset-0 overflow-hidden rounded-full">
+        <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </span>
+      <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
+        <span>Tailwind Connect</span>
+        <svg
+          fill="none"
+          height="16"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.75 8.75L14.25 12L10.75 15.25"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </div>
+      <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+    </button>
+  );
+};
+
 const Hero = () => {
-    const texts = useRef<(HTMLSpanElement | null)[]>([])
+  const texts = useRef<(HTMLSpanElement | null)[]>([]);
+  const [points, setPoints] = useState([1, 2, 3, 4]);
 
   useGSAP(() => {
-    if(!texts.current) return;
+    if (!texts.current) return;
 
-    const tl = gsap.timeline({
-      repeat:-1,
-    })
+    const tl = gsap.timeline({ repeat: -1 });
 
     texts.current.forEach((text, idx) => {
       if (!text) return;
 
-      //texts-container
       tl.to("#texts-container", {
         yPercent: (-100 * idx) / texts.current.length,
         duration: 1,
         ease: "power3.inOut",
         delay: 0.7 * idx,
+        onStart: () => {
+          setPoints((prev) => prev.map((n) => (n % 4) + 1));
+        },
       });
-    })
+    });
 
     tl.set("#texts-container", {
       yPercent: 0,
-      delay: 0.7, // Optional pause before restarting
+      delay: 0.7,
     });
-  })
-  
+  }, []);
+
+  useEffect(() => {
+    console.log("Updated points:", points);
+  }, [points[0]]);
+
   return (
-    <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-cente justify-cente">
-      <motion.img
-        src="https://i.imgur.com/GEEU91r.png"
-        alt=""
-        className="absolute lg:w-[1200px] -translate-x-1/2 left-1/2 -translate-y-1/2 lg:top-[65%] top-[40%] inset-0 object-cover"
-      />
-      <h1 className="font-batmanmini text-[18px] bottom-[25%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
+    <div className="w-screen overflow-x-hidden flex-col relative min-h-screen flex items-center justify-cente">
+      <div
+        style={{ perspective: "100vh", transformStyle: "preserve-3d" }}
+        className="w-full h-full flex items-center justify-center absolute inset-0"
+      >
+        <div className="absolute hidden inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-30"></div>
+
+        {[
+          "home-images/WhatsApp_Image_2025-07-31_at_12.07.20_AM-removebg-preview.png",
+          "https://i.imgur.com/GEEU91r.png",
+          "home-images/WhatsApp_Image_2025-07-31_at_12.07.20_AM-removebg-preview.png",
+          "https://i.imgur.com/GEEU91r.png",
+        ].map((src, idx) => (
+          <motion.img
+            key={idx}
+            style={{
+              transformStyle: "preserve-3d",
+              transform: `translate3d(0px, 0px, ${
+                translateZPoints[points[idx] - 1]
+              }px)`,
+            }}
+            src={src}
+            alt=""
+            className="absolute bg-black transition-transform duration-1000 ease-out delay-100"
+          />
+        ))}
+      </div>
+
+      <div className="w-auto h-auto absolute top-[6rem]">
+        <HeroButton />
+      </div>
+      <h1 className="font-batmanmini z-50 text-[18px] bottom-[10%] lg:bottom-[15%] -translate-x-1/2 lg:translate-x-0 lg:left-0 left-1/2 w-full p-6 text-center h-auto  absolute font-extralight text-white/80">
         Do More Than <br />
         <span className="w-full flex h-[4.5rem] lg:h-[8rem] overflow-hidden flex-start">
           <span
@@ -48,7 +110,7 @@ const Hero = () => {
               return (
                 <span
                   className="w-full flex bg-gradient-to-t to-[#019fa9] from-[#f8dc2a] text-transparent bg-clip-text justify-center items-center"
-                  key={e}
+                  key={`${e}-${idx}`}
                   ref={(e) => {
                     texts.current[idx] = e;
                   }}
@@ -60,17 +122,8 @@ const Hero = () => {
           </span>
         </span>
       </h1>
-
-      <button className="w-[80%] h-auto flex justify-center absolute bottom-8 -translate-x-1/2 left-1/2">
-        <img
-          src="/home-images/WhatsApp_Image_2025-07-30_at_11.24.24_PM-removebg-preview.png"
-          alt=""
-          className="ml-6 h-[10rem]"
-        />
-        <h2 className="absolute top-1/2 -translate-y-1/2 text-[14px]">components</h2>
-      </button>
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;
