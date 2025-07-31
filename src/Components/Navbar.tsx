@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import {MdOutlineLocationSearching} from "react-icons/md";
 import {FaGithub} from "react-icons/fa"
 import MovingBorder from "./Buttons/MovingBorder";
+import { Link } from "react-router-dom";
 
 
 const StarButton = ({lg}:{lg:boolean}) => {
@@ -69,30 +70,28 @@ const Nav = () => {
       }}
       className={`fixed [trans] ${
         !showNavBar
-          ? "top-4 w-[90%] py-3 px-6 bg-inherit/[0.5]"
-          : "top-0 w-full p-10  bg-inherit"
-      } lg:rounded-none ${
-        showNavBar ? "rounded-[15px]" : "rounded-full"
-      } lg:py-0 z-[20000] flex-col lg:flex-row items-center flex justify-between border-b-[.3px] border-white/[0.2] lg:top-0 lg:w-screen min-h-8 lg:min-h-16 lg:bg-inherit/[0.5] backdrop-blur-[20px]`}
+          ? "top-4 w-[90%] rounded-full py-3 px-6 bg-inherit/[0.5]"
+          : "top-0 w-full rounded-[15px] p-10  bg-black"
+      } lg:rounded-none lg:py-0 z-[20000] flex-col lg:flex-row items-center flex justify-between border-b-[.3px] border-white/[0.2] lg:top-0 lg:w-screen min-h-8 lg:min-h-16 lg:bg-inherit/[0.5] backdrop-blur-[20px]`}
     >
       <div className="w-full lg:w-fit h-auto flex justify-between items-center">
-        <span className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-[#019fa9] tracking-tighter">
+        <Link to="/" className="text-bold w-fit mix-blend-difference h-fit overflow-y-hidden text-xl text-[#019fa9] tracking-tighter">
           <span id="logo" className="flex">
             mecalo.
           </span>
-        </span>
+        </Link>
         <span
           onClick={() => setShowNavBar((prev) => !prev)}
           className="flex relative lg:hidden gap-1.5 w-fit h-fit flex-col"
         >
           <span
-            className={`flex w-[1.1em] ${
+            className={`flex min-w-[2em] ${
               showNavBar
                 ? "-rotate-45 -translate-y-1/2 top-1/2 absolute"
                 : "rotate-0"
             } h-[2px] bg-white/[0.8]`}
           />
-          <span className="flex w-[1.1em] h-[1.2px]">
+          <span className="flex w-[2em] h-[1.2px]">
             <span
               id="first-line"
               className="flex w-1/2 h-[2px] bg-white/[0.8]"
@@ -103,7 +102,7 @@ const Nav = () => {
             />
           </span>
           <span
-            className={`flex transform w-[1.1em] ${
+            className={`flex transform w-[2em] ${
               showNavBar
                 ? "rotate-45 -translate-y-1/2 top-1/2 absolute"
                 : "rotate-0"
@@ -113,7 +112,7 @@ const Nav = () => {
       </div>
 
       <div
-        className={`lg:w-fit relative rounded-none flex-col pt-16 lg:pt-0 lg:flex-row text-2xl h-screen w-full lg:absolute lg:-translate-x-1/2 lg:left-1/2 text-transparent bg-clip-text gap-6 items-center list-none flex  lg:h-fit bg-gradient-to-r from-white/80 to bg-gray-400 ${
+        className={`lg:w-fit relative rounded-none flex-col pt-16 lg:pt-0 lg:flex-row text-2xl h-screen w-full lg:absolute lg:-translate-x-1/2 lg:left-1/2 text-transparent bg-clip-text gap-6 items-center list-none flex lg:h-fit bg-gradient-to-r from-white/80 to bg-gray-400 ${
           !showNavBar
             ? "translate-x-full hidden lg:flex"
             : "translate-x-0 block"
@@ -125,9 +124,9 @@ const Nav = () => {
       >
         {["Components", "Templates", "Docs"].map((e) => {
           return (
-            <li className="w-fit h-fit font-light text-[16px] overflow-hidden">
+            <Link onClick={() => setShowNavBar(false)} to={`/${e.toLocaleLowerCase()}`} className="w-fit h-fit font-light text-[16px] overflow-hidden">
               <span className=" text-[14px]">{e}</span>
-            </li>
+            </Link>
           );
         })}
         <span className="w-fit h-fit text-nowrap px-6 py-3 text-[20px] text-white rounded-lg">
